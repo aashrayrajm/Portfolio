@@ -10,7 +10,8 @@
 }
 
 :root {
-  --primary-color-100: hsl(210, 21%, 90%);
+  --primary-color-100: hsl(210, 21%, 95%);
+  --primary-color-200: hsl(210, 21%, 75%);
   --primary-color-400: hsl(210, 21%, 45%);
   --primary-color-800: hsl(210, 21%, 5%);
   --accent-color: #fd4d4d;
@@ -104,13 +105,26 @@ body {
   right: -8vw;
 }
 
-.hero-wrapper .hero-top .mouse-scroll {
+.hero-wrapper .hero-top .scroll-down {
   position: absolute;
   right: 3vw;
-  top: calc(100vh - 50px);
+  bottom: 1rem;
+  opacity: 0.5;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  color: var(--primary-color-400);
+}
+
+.hero-wrapper .hero-top .scroll-down h5 {
+  font-weight: 600;
+  margin: 0 1rem;
+}
+
+.hero-wrapper .hero-top .mouse-scroll {
+  position: relative;
   width: 26px;
   height: 42px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid var(--primary-color-400);
   border-radius: 50px;
 }
 
@@ -120,8 +134,8 @@ body {
   width: 6px;
   height: 12px;
   content: "";
-  background-color: #c3c3c3;
-  left: calc(50% - 3.5px);
+  background-color: var(--primary-color-400);
+  right: calc(50% - 3px);
   border-radius: 10px;
   -webkit-animation: mouse 1.8s infinite;
           animation: mouse 1.8s infinite;
@@ -251,7 +265,7 @@ body {
 }
 
 .project-desc h3 {
-  font-size: 4.5rem;
+  font-size: 5rem;
   font-weight: 600;
   letter-spacing: 0.3rem;
   margin-bottom: 2rem;
@@ -268,5 +282,40 @@ body {
   font-size: 1.1rem;
   letter-spacing: 5px;
   font-weight: 600;
+}
+
+.services-wrapper {
+  padding: 0 3rem;
+}
+
+.services-wrapper .services-card .service-index {
+  position: relative;
+}
+
+.services-wrapper .services-card .service-index::before {
+  content: "";
+  background: #fff;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  margin-top: -1px;
+  z-index: -1;
+}
+
+.services-wrapper .services-card .service-index span {
+  padding-right: 15px;
+  font-size: 1.25rem;
+  background: var(--primary-color-800);
+}
+
+.services-wrapper .services-card h3 {
+  margin: 2rem 0;
+  text-align: right;
+  font-size: 4.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=style.css.map */

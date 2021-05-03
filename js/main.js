@@ -15,6 +15,8 @@ function scrollFunction() {
         if(scrollWidthY > 18){
             scrollWidthY = 18;
         }
+        
+        $(".scroll-down").css({ "opacity": "0"})
         $(".first-name").css({ "transform": "Scale(" + newvalue + ") translate(" + (scrollWidth+3)+"vw,"+scrollWidthY+"vw)",});
         $(".last-name").css({ "transform": "Scale(" + newvalue + ") translate(-"+scrollWidth+"vw,"+(scrollWidth+5)+"vw)",});
     }
@@ -23,6 +25,7 @@ function scrollFunction() {
         $(".last-name").css({ "transform": "Scale(1) translate(-22.5vw,33vw)"});
     }
     else {
+        $(".scroll-down").css({ "opacity": "0.5"})
         $(".first-name").css({ "transform": "Scale(0.7)", "left": "-3vw"});
         $(".last-name").css({ "transform": "Scale(0.7)"});
     }
