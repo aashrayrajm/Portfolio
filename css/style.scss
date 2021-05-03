@@ -128,7 +128,7 @@ body{
                 height: 12px;
                 content: "";
                 background-color: var(--primary-color-400);
-                right: calc(50% - 3px);
+                right: calc(50% - 2.5px);
                 border-radius: 10px;
                 animation: mouse 1.8s infinite;
             }
@@ -193,6 +193,7 @@ body{
 .section {
   height: 100vh;
   width: 100vw;
+  overflow: auto;
   float: left;
   display: flex;
   align-items: center;
@@ -201,7 +202,6 @@ body{
 
 .project-img {
     align-items: flex-end;
-    width: 30rem;
 
     img{
         width: 100%;
@@ -251,6 +251,21 @@ body{
     }
 }
 
+.projects-know-more{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a{
+        color: var(--accent-color);
+        font-size: 1.1rem;
+        font-weight: 600;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+}
+
 .services-wrapper{
     padding: 0 3rem;
 
@@ -262,7 +277,7 @@ body{
 
             &::before{
                 content: "";
-                background: #fff;
+                background: var(--primary-color-100);
                 display: block;
                 position: absolute;
                 left: 0;
@@ -277,6 +292,7 @@ body{
                 padding-right: 15px;
                 font-size: 1.25rem;
                 background: var(--primary-color-800);
+                color: var(--accent-color);
             }
 
         }
