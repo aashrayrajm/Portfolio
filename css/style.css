@@ -28,7 +28,7 @@ html {
 body {
   background-color: var(--primary-color-800);
   color: var(--primary-color-100);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .accent {
@@ -39,6 +39,7 @@ body {
   text-transform: uppercase;
   width: 100%;
   position: fixed;
+  top: 0;
   z-index: 5;
 }
 
@@ -90,11 +91,11 @@ body {
 .hero-wrapper .hero-top .hero-text h1 {
   font-size: 13vw;
   position: absolute;
+  bottom: 0;
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
   -webkit-transition: 0.5s ease-out;
   transition: 0.5s ease-out;
-  mix-blend-mode: exclusion;
 }
 
 .hero-wrapper .hero-top .hero-text .first-name {
@@ -109,10 +110,10 @@ body {
   position: absolute;
   right: 3vw;
   bottom: 1rem;
-  opacity: 0.3;
+  opacity: 0.4;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
-  color: var(--primary-color-100);
+  color: var(--accent-color);
 }
 
 .hero-wrapper .hero-top .scroll-down h5 {
@@ -124,7 +125,7 @@ body {
   position: relative;
   width: 26px;
   height: 42px;
-  border: 1px solid var(--primary-color-100);
+  border: 1px solid var(--accent-color);
   border-radius: 50px;
 }
 
@@ -134,7 +135,7 @@ body {
   width: 6px;
   height: 12px;
   content: "";
-  background-color: var(--primary-color-400);
+  background-color: var(--accent-color);
   right: calc(50% - 2.5px);
   border-radius: 10px;
   -webkit-animation: mouse 1.8s infinite;
@@ -341,30 +342,43 @@ body {
   text-transform: uppercase;
 }
 
-.glass-morph-wrapper {
-  padding: 40vh 3rem 5rem;
-}
-
-.glass-morph-wrapper .glass-morph {
+.glass-morph-wrap {
+  padding: 30vh 3rem 20vh;
   position: relative;
-  z-index: 1;
-  height: 20vh;
-  width: 100%;
-  background-color: #fefefe;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  max-width: 100%;
+  overflow: hidden;
 }
 
-.glass-morph-wrapper .glass-morph::before {
-  content: '';
-  position: absolute;
-  display: block;
-  left: -8%;
-  top: -70%;
-  z-index: 0;
+.glass-morph-wrap .before-ball {
+  position: relative;
+  -webkit-transform: translate(-50%, 60%);
+          transform: translate(-50%, 60%);
   width: 10rem;
   height: 10rem;
+  background: linear-gradient(330deg, #c83535, rgba(164, 55, 55, 0));
   border-radius: 50%;
-  background: var(--accent-color);
+}
+
+.glass-morph-wrap .glass-morph {
+  padding: 5rem;
+  position: relative;
+  z-index: 1;
+  border-radius: 30px;
+  width: 100%;
+  background-clip: padding-box;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.glass-morph-wrap .after-ball {
+  position: absolute;
+  -webkit-transform: translate(20%, -70%);
+          transform: translate(20%, -70%);
+  right: 0;
+  width: 15rem;
+  height: 15rem;
+  background: linear-gradient(215deg, #c83535, rgba(164, 55, 55, 0));
+  border-radius: 50%;
 }
 /*# sourceMappingURL=style.css.map */

@@ -30,9 +30,6 @@ function scrollFunction() {
         $(".last-name").css({ "transform": "Scale(0.7)"});
     }
 }
-
-console.clear();
-
 TweenLite.defaultEase = Linear.easeNone;
 var controller = new ScrollMagic.Controller();
 var tl = new TimelineMax();
