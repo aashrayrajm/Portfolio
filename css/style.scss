@@ -12,7 +12,7 @@
 :root {
   --primary-color-100: hsl(210, 21%, 95%);
   --primary-color-200: hsl(210, 21%, 75%);
-  --primary-color-400: hsl(210, 21%, 45%);
+  --primary-color-300: hsl(210, 21%, 65%);
   --primary-color-800: hsl(210, 21%, 5%);
   --accent-color: #fd4d4d;
 }
@@ -64,7 +64,6 @@ body {
 }
 
 .hero-wrapper {
-  height: 200vh;
   overflow: hidden;
 
   .hero-top {
@@ -147,14 +146,15 @@ body {
   }
 
   .hero-bottom-wrapper {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     .hero-bottom {
-      position: relative;
       text-align: center;
-      top: 28vw;
       width: 80%;
-      padding: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
+      padding: 30vw 2rem 2rem;
 
       p {
         font-size: 2.5rem;
@@ -239,13 +239,16 @@ body {
     font-size: 1.5rem;
     line-height: 2.5rem;
   }
+}
+.btn {
+  color: var(--accent-color);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  font-weight: 600;
 
-  .btn {
-    color: var(--accent-color);
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    letter-spacing: 5px;
-    font-weight: 600;
+  &:hover {
+    color: #e46f6f;
   }
 }
 
@@ -304,7 +307,7 @@ body {
 }
 
 .glass-morph-wrap {
-  padding: 30vh 3rem 20vh;
+  padding: 30vh 3rem 10vh;
   position: relative;
   max-width: 100%;
   overflow: hidden;
@@ -326,11 +329,42 @@ body {
     padding: 5rem;
     position: relative;
     z-index: 1;
-    border-radius: 30px;
     width: 100%;
+    border-radius: 30px;
     background-clip: padding-box;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 0 40px var(--primary-color-800);
+    backdrop-filter: blur(12px);
+
+    .glass-content {
+      h3 {
+        font-size: 4.5rem;
+        font-weight: 600;
+        // text-transform: uppercase;
+      }
+
+      .btn {
+        margin: 1rem 0;
+        padding: 1rem 0;
+        font-size: 1.5rem;
+      }
+
+      i {
+        margin: 1rem 0.5rem;
+        font-size: 1.4rem;
+        color: var(--primary-color-300);
+      }
+
+      p {
+        word-spacing: 2px;
+        color: var(--primary-color-300);
+
+        a:hover {
+          color: #e46f6f;
+          text-decoration: none;
+        }
+      }
+    }
   }
 
   .after-ball {
