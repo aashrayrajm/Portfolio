@@ -21,7 +21,7 @@ function scrollFunction() {
         $(".last-name").css({ "transform": "Scale(" + newvalue + ") translate(-"+scrollWidth+"vw,"+(scrollWidth+5)+"vw)",});
     }
     else if (positiontop > (window.innerWidth) * 0.24){
-        $(".first-name").css({ "transform": "Scale(1) translate(28vw,22vw)", "left": "0vw"});
+        $(".first-name").css({ "transform": "Scale(1) translate(30vw,22vw)", "left": "0vw"});
         $(".last-name").css({ "transform": "Scale(1) translate(-22.5vw,33vw)"});
     }
     else {
@@ -38,7 +38,7 @@ var ww = window.innerWidth;
 
 var noSlides = $(".section").length;
 var slideWidth = $(".section").width();
-var slideContainerWidth = slideWidth * noSlides - ww;
+var slideContainerWidth = slideWidth * noSlides;
 
 console.log(noSlides, slideWidth, slideContainerWidth, ww);
 
@@ -46,7 +46,7 @@ TweenLite.set('#lineSVG', { width: slideContainerWidth + ww })
 
 
 var actionHorizontal = new TimelineMax()
-    .to("#slideContainer", 1, { x: -slideContainerWidth })
+    .to("#slideContainer", 1, { x: -slideContainerWidth + slideWidth })
 
 var horizontal = createHorizontal();
 
