@@ -40,7 +40,7 @@ var noSlides = $(".section").length;
 var slideWidth = $(".section").width();
 var slideContainerWidth = slideWidth * noSlides - ww;
 
-console.log(noSlides, slideContainerWidth);
+console.log(noSlides, slideWidth, slideContainerWidth, ww);
 
 TweenLite.set('#lineSVG', { width: slideContainerWidth + ww })
 
