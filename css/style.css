@@ -113,7 +113,7 @@ body {
   position: absolute;
   right: 3vw;
   bottom: 1rem;
-  opacity: 0.4;
+  opacity: 0.35;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   color: var(--accent-color);
@@ -244,6 +244,10 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.section .project-wrapper {
+  height: 100%;
 }
 
 .project-img {
@@ -442,7 +446,7 @@ body {
 
 @media only screen and (max-width: 769px) {
   .navbar {
-    padding: 1.5rem !important;
+    padding: 1.5rem 1rem !important;
   }
   .navbar-brand {
     padding-top: 0;
@@ -461,6 +465,9 @@ body {
   .hero-wrapper .hero-bottom-wrapper .hero-bottom {
     width: 100%;
   }
+  .project-desc-wrapper {
+    padding: 3rem 1rem !important;
+  }
   .project-img {
     width: 100%;
     -webkit-box-pack: center !important;
@@ -468,7 +475,8 @@ body {
             justify-content: center !important;
   }
   .project-img img {
-    width: 50vw;
+    width: 100%;
+    max-width: 50vw;
   }
   .services-wrapper {
     padding: 0 1rem !important;
@@ -482,11 +490,16 @@ body {
   .hero-wrapper .hero-top .scroll-down {
     display: none !important;
   }
-  .hero-wrapper .hero-bottom-wrapper .hero-bottom p {
-    font-size: 1.5rem;
+  .hero-wrapper .hero-bottom-wrapper .hero-bottom {
+    padding-top: 20vh;
   }
-  .project-desc h3 {
-    font-size: 3rem;
+  .hero-wrapper .hero-bottom-wrapper .hero-bottom p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+  .project-desc p {
+    font-size: 1.25rem;
+    line-height: 2.25rem;
   }
   .services-wrapper .services-card h3 {
     font-size: 3.5rem;
