@@ -63,6 +63,10 @@ body {
   }
 }
 
+.navbar-links-mob {
+  display: none;
+}
+
 .hero-wrapper {
   overflow: hidden;
 
@@ -154,7 +158,7 @@ body {
     .hero-bottom {
       text-align: center;
       width: 80%;
-      padding: 30vw 2rem 2rem;
+      padding: 35vw 2rem 2rem;
 
       p {
         font-size: 2.5rem;
@@ -393,11 +397,29 @@ body {
 
 @media only screen and (max-width: 992px) {
   .hero-wrapper .hero-top .hero-text h1 {
-    bottom: 2vh;
+    bottom: 4vh;
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 769px) {
+  .navbar {
+    padding: 1.5rem !important;
+  }
+
+  .navbar-brand {
+    padding-top: 0;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-links-mob {
+    display: block;
+    line-height: 18px;
+    font-weight: 800;
+  }
+
   .hero-wrapper .hero-top .hero-text h1 {
     bottom: 5vh;
   }
@@ -414,20 +436,22 @@ body {
       width: 50vw;
     }
   }
+  .services-wrapper {
+    padding: 0 1rem !important;
+  }
 }
 
 @media only screen and (max-width: 590px) {
   .hero-wrapper .hero-top .hero-text h1 {
-    bottom: 7vh;
+    bottom: 0;
   }
 
-  .hero-wrapper .hero-bottom-wrapper .hero-bottom {
-    padding-top: 25vw;
+  .hero-wrapper .hero-top .scroll-down {
+    display: none !important;
   }
 
   .hero-wrapper .hero-bottom-wrapper .hero-bottom p {
-    font-size: 1.8rem;
-    line-height: 3rem;
+    font-size: 1.5rem;
   }
 
   .project-desc h3 {
@@ -435,15 +459,15 @@ body {
   }
 
   .services-wrapper .services-card h3 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 }
 
-@media only screen and (max-width: 424px) {
+@media only screen and (max-width: 425px) {
   .project-desc-wrapper {
     padding: 1rem !important;
   }
   .services-wrapper .services-card h3 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 }

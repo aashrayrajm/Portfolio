@@ -14,15 +14,21 @@ function scrollFunction() {
         
         if(scrollWidthY > 18){
             scrollWidthY = 18;
+        }else if( scrollWidthY < 0){
+            scrollWidthY = 2
+        }
+
+        if( scrollWidth < 0){
+            scrollWidth = 0
         }
         
         $(".scroll-down").css({ "opacity": "0"})
-        $(".first-name").css({ "transform": "Scale(" + newvalue + ") translate(" + (scrollWidth+3)+"vw,"+scrollWidthY+"vw)",});
+        $(".first-name").css({ "transform": "Scale(" + newvalue + ") translate(" + (scrollWidth)+"vw,"+scrollWidthY+"vw)",});
         $(".last-name").css({ "transform": "Scale(" + newvalue + ") translate(-"+scrollWidth+"vw,"+(scrollWidth+5)+"vw)",});
     }
     else if (positiontop > (window.innerWidth) * 0.24){
-        $(".first-name").css({ "transform": "Scale(1) translate(30vw,22vw)", "left": "0vw"});
-        $(".last-name").css({ "transform": "Scale(1) translate(-22.5vw,33vw)"});
+        $(".first-name").css({ "transform": "Scale(1) translate(28.5vw,22vw)", "left": "0vw"});
+        $(".last-name").css({ "transform": "Scale(1) translate(-22.5vw,35vw)"});
     }
     else {
         $(".scroll-down").css({ "opacity": "0.5"})
@@ -54,7 +60,7 @@ function createHorizontal() {
     return new ScrollMagic.Scene({
         triggerElement: "#js-wrapper",
         triggerHook: "onLeave",
-        duration: slideContainerWidth
+        duration: 2000
     })
         .setPin("#js-wrapper")
         .setTween(actionHorizontal)
